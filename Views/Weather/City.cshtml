@@ -1,0 +1,42 @@
+﻿@model IEnumerable<SampleDBConn.Model.RootObject>
+
+@{
+    ViewBag.Title = "City";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1 style="color:white">Weather Info</h1>
+
+
+<table style="color:white" class="table">
+    <thead>
+        <tr>
+
+            <th>
+                @Html.DisplayNameFor(model => model.City)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Description)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.WeatherForecast)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Country)
+            </th>
+
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+
+            <td>@ViewBag.City </td>
+            <td>@ViewBag.Temp </td>
+
+            <td>@ViewBag.Summary </td>
+
+            <td>@ViewBag.Country </td>
+        </tr>
+}
+    </tbody>
+</table>

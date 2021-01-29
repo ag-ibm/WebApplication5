@@ -1,0 +1,36 @@
+﻿@model IEnumerable<SampleDBConn.Model.RootObject>
+
+
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<br />
+<p style="color:white;font-size:24px">
+
+    This websevice fetches the data realtime from openweather service and displays it on the page.
+</p>
+
+<br />
+
+<br />
+<table>
+    <tr>
+        <td style="color:white;font-size:24px">
+            Please enter City Name:<br>
+        </td>
+        <td>
+        </td>
+        <td>
+            <input type="text" id="ID" style="width: 325px" />
+        </td>
+        <td>
+        </td>
+        <td>
+            <input type="submit" value="Get Weather Info" onclick="location.href='@Url.Action("City", "Weather")?city=' + $('#ID').val()" />
+
+        </td>
+    </tr>
+</table>
+
